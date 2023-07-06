@@ -1,0 +1,22 @@
+package commonapi
+  
+interface HelloWorld {
+  version {major 1 minor 0}
+ 
+  attribute Boolean HelloState readonly
+ 
+  method sayHello {
+    in {
+      String name
+    }
+    out {
+      String message
+    }
+  }
+ 
+  broadcast HelloBroadcast {
+        out {
+            String message
+        }
+    }
+} 
